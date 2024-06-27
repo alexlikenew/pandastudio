@@ -1,0 +1,805 @@
+.section-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.section-heading::after {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #d1fd08;
+  bottom: 0;
+  left: 30%;
+  content: "";
+}
+
+.btn-reservation {
+  padding: 1rem 3rem 1rem 3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 3rem;
+  background-color: #d1fd08;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background-color 0.4s, color 0.4s;
+}
+.btn-reservation:hover {
+  background-color: #1a1a1a;
+  color: #d1fd08;
+}
+
+.btn-apply {
+  color: #1a1a1a;
+  padding: 1rem;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: left;
+  line-height: 145%;
+  border: 2px solid #d1fd08;
+  box-shadow: 0.3em 0.3em 0 0 #d1fd08, inset 0.3em 0.3em 0 0 #d1fd08;
+  transition: box-shadow 0.25s, color 0.25s;
+  cursor: pointer;
+}
+.btn-apply:hover, .btn-apply:focus {
+  box-shadow: 0 0 0 0 #d1fd08, inset 6em 3.5em 0 0 #d1fd08;
+  color: #1a1a1a;
+}
+
+.bg-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.row {
+  margin: -20px 0;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row .col {
+  padding: 0 20px;
+  float: left;
+  box-sizing: border-box;
+}
+.row .col.x-50 {
+  width: 50%;
+}
+.row .col.x-100 {
+  width: 100%;
+}
+
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.get-in-touch {
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+}
+.get-in-touch .title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 36px;
+  line-height: 48px;
+  padding-bottom: 48px;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #000;
+  padding: 0.2rem;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.contact-form .input-text--message {
+  height: 200px;
+}
+.contact-form .input-text:focus {
+  outline: none;
+}
+.contact-form .input-text:focus + .label, .contact-form .input-text.not-empty + .label {
+  transform: translateY(-30px);
+  color: #d1fd08;
+}
+.contact-form .label {
+  position: absolute;
+  left: 30px;
+  top: 2px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #1a1a1a;
+  cursor: text;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.contact-form .btn-apply {
+  background-color: #d1fd08;
+}
+
+.note {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+}
+.note .link {
+  color: #888;
+  text-decoration: none;
+}
+.note .link:hover {
+  text-decoration: underline;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: #d1fd08;
+  z-index: 2000;
+}
+.nav .nav-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.nav__logo {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  width: 30%;
+}
+.nav__logo__img {
+  max-height: 60px;
+  margin-left: 4rem;
+  margin-right: 3rem;
+}
+.nav__logo__img--text {
+  max-height: 60px;
+}
+.nav__desktop {
+  width: 70%;
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav__desktop__item {
+  padding: 4rem 2rem 2rem 2rem;
+  color: #1a1a1a;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.2s, background-color 0.3s;
+}
+.nav__desktop__item:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+}
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.burger-btn:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.486);
+  border-radius: 8px;
+}
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+  transition-delay: 0.3s;
+}
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: "";
+  background-color: #1a1a1a;
+  transition: width 0.3s;
+}
+.burger-btn__bars {
+  width: 100%;
+}
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+}
+
+.header {
+  width: 100%;
+  background-image: url("../img/stuio-panda-trening.jpg");
+  background-position: 50% 60%;
+  background-size: cover;
+  position: relative;
+  min-height: 700px;
+}
+.header__bg-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.747);
+}
+.header__text-box {
+  width: 100%;
+  position: relative;
+  padding: 10rem 2rem 0 2rem;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+.header__text-box__title {
+  font-size: 7rem;
+}
+.header__text-box__text {
+  position: relative;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #d1fd08;
+  padding-bottom: 2rem;
+}
+.header__text-box__text::after {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #d1fd08;
+  bottom: 0;
+  left: 30%;
+  content: "";
+}
+.header__text-box__underline {
+  margin-top: 5rem;
+  font-size: 3rem;
+  padding: 1rem;
+}
+.header__text-box__underline span {
+  color: #d1fd08;
+}
+
+.services {
+  width: 100%;
+  display: flex;
+}
+.services__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem 2rem 2rem;
+  margin: 0 1rem 0 1rem;
+}
+.services__option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.services__option button {
+  background-color: transparent;
+  padding: 2rem;
+}
+.services__option:last-child {
+  margin-top: 4rem;
+}
+.services__option__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.services__option__img--training {
+  background-image: url("../img/studio-panda-sala.jpg");
+}
+.services__option__img--massage {
+  background-image: url("../img/studio-panda-masaz.jpg");
+}
+.services__option__img .bg-box--green {
+  background-color: rgba(208, 253, 8, 0.267);
+  transition: background-color 0.3s;
+}
+.services__option__img .bg-box--gold {
+  background-color: rgba(255, 213, 0, 0.3019607843);
+  transition: background-color 0.3s;
+}
+.services__option__img__heading {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  z-index: 1000;
+  text-shadow: 0px 0px 11px rgb(66, 68, 90);
+  transition: background-color 0.3s;
+}
+.services__option__img:hover {
+  transform: scale(1.03);
+}
+.services__option__img:hover .bg-box {
+  background-color: rgba(208, 253, 8, 0.103);
+}
+.services__option__text {
+  line-height: 140%;
+}
+.services__option__text--bold {
+  font-weight: 700;
+}
+.services__option p {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: "Poppins";
+  line-height: 145%;
+}
+
+.offers {
+  width: 100%;
+}
+.offers__box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 3rem 2rem 3rem;
+}
+.offers__offer {
+  width: 100%;
+  margin-bottom: 3.4rem;
+  border-radius: 6px;
+}
+.offers__offer img {
+  width: 100%;
+  border-radius: 6px;
+}
+.offers__offer__heading {
+  font-size: 3.6rem;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem 0 1rem 0;
+}
+.offers__offer p {
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: 145%;
+}
+
+.about-me {
+  width: 100%;
+}
+.about-me .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.about-me__heading {
+  padding-top: 4rem;
+}
+.about-me__heading img {
+  margin-left: 1.4rem;
+  width: 10rem;
+}
+.about-me__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+}
+.about-me__box__img {
+  max-width: 100%;
+}
+.about-me__box__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.8rem 1rem 1rem 1rem;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: 145%;
+}
+.about-me__box__text--bold {
+  font-weight: 700;
+}
+.about-me__box__text--why-us {
+  margin-top: 2rem;
+}
+.about-me__box__text button {
+  margin-top: 3rem;
+}
+.about-me__box__text img {
+  margin-top: 4rem;
+  max-width: 30%;
+}
+.about-me__box__text__title {
+  font-size: 3.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 100%;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.about-me__box__text__title--green {
+  position: relative;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #d1fd08;
+  margin-bottom: 2rem;
+}
+.about-me__box__text__title--green::after {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #d1fd08;
+  bottom: 0;
+  left: 30%;
+  content: "";
+}
+
+.map {
+  width: 100%;
+}
+.map__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.map .map-heading {
+  padding: 10rem 4rem 2rem 4rem;
+}
+.map__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+}
+.map__box__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 1rem 1rem 1rem;
+  color: #1a1a1a;
+}
+.map__box__info ul {
+  list-style: none;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: 145%;
+}
+.map__box__info ul li {
+  text-align: center;
+  margin-top: 3rem;
+}
+.map__box__info ul li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.4rem;
+}
+.map__box__info ul li a {
+  color: #1a1a1a;
+}
+.map__box__info ul li .btn-apply {
+  padding: 2rem;
+}
+.map__box__info ul li:last-child {
+  margin-top: 5rem;
+}
+.map__box__info__logo {
+  max-width: 40rem;
+}
+.map__box__map {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map__box__map iframe {
+  max-width: 100%;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
+  background-image: url("../img/stuio-panda-trening.jpg");
+  background-position: 50% 60%;
+  background-size: cover;
+  overflow: hidden;
+}
+.footer .footer-heading {
+  position: relative;
+  color: #fff;
+  z-index: 1000;
+}
+.footer .footer-heading::after {
+  position: absolute;
+  width: 40%;
+  height: 4px;
+  background-color: #d1fd08;
+  bottom: 0;
+  left: 30%;
+  content: "";
+}
+.footer__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 145%;
+  color: #fff;
+  z-index: 1000;
+}
+.footer__box ul {
+  list-style: none;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: 250%;
+}
+.footer__box ul li {
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer__box ul li a {
+  color: #fff;
+}
+.footer__box ul li img {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.4rem;
+  transform: translateY(20%);
+}
+.footer__rights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 4vh;
+  background-color: #101922;
+  color: gray;
+  text-transform: uppercase;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  line-height: 250%;
+}
+
+@media (min-width: 576px) {
+  .offers__offer {
+    min-height: 70rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__text-box {
+    padding-top: 15rem;
+  }
+  .offers__box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .offers__offer {
+    width: 45%;
+  }
+  .about-me__box__img {
+    max-width: 90%;
+  }
+  .about-me__box__text {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .btn-reservation {
+    padding: 1rem 3rem 1rem 3rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    background-color: #d1fd08;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  .btn-reservation:hover {
+    background-color: #1a1a1a;
+    color: #d1fd08;
+  }
+  .section-heading {
+    font-size: 2.4rem;
+  }
+  .header {
+    height: 70vh;
+  }
+  .header__text-box {
+    padding-top: 15rem;
+  }
+  .services__option p {
+    font-size: 1.6rem;
+  }
+  .burger-btn {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+  }
+  .services__box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .services__option {
+    width: 40%;
+  }
+  .services__option:last-child {
+    margin-top: 0;
+  }
+  .offers__offer p {
+    font-size: 1.6rem;
+  }
+  .offers__offer a {
+    font-size: 1.6rem;
+  }
+  .offers__offer__heading {
+    font-size: 2.2rem;
+  }
+  .offers__offer {
+    min-height: 50rem;
+  }
+  .about-me__box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .about-me__box__img {
+    max-width: 45%;
+    border-radius: 8px;
+  }
+  .about-me__box__text {
+    max-width: 50%;
+    font-size: 1.6rem;
+  }
+  .map__box {
+    flex-direction: row;
+  }
+  .footer__box {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__box ul {
+    width: 45%;
+  }
+  .footer__box .get-in-touch {
+    width: 40%;
+  }
+}
+@media (min-width: 1100px) {
+  .burger-btn {
+    display: none;
+  }
+  .nav__desktop {
+    display: flex;
+    margin-right: 0.9rem;
+  }
+  .offers__offer {
+    width: 32%;
+  }
+}/*# sourceMappingURL=style.css.map */
